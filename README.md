@@ -3,13 +3,16 @@ example fluentd hooks for logrus
 
 :octopus:
 
-## Install Fluent
+### Install Fluent
 
 ```Bash
 docker pull fluent/fluentd
-vim /tmp/fluentd.conf
-docker run -it -p 9880:9880 -v /tmp:/fluentd/etc -e FLUENTD_CONF=fluentd.conf -v /data:/fluentd/log  fluent/fluentd
 ```
+### Configure Fluent
+```Bash
+vim /tmp/fluentd.conf
+```
+
 ```fluentd.conf
 <source>
     @type forward
@@ -18,6 +21,10 @@ docker run -it -p 9880:9880 -v /tmp:/fluentd/etc -e FLUENTD_CONF=fluentd.conf -v
   <match **>
     @type stdout
   </match>
+```
+### Run container
+```Bash
+docker run -it -p 9880:9880 -v /tmp:/fluentd/etc -e FLUENTD_CONF=fluentd.conf -v /data:/fluentd/log  fluent/fluentd
 ```
 
 ## Run main.go
