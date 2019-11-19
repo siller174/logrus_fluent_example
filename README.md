@@ -1,8 +1,6 @@
 # logrus_fluent_example
 example fluentd hooks for logrus
 
-:octopus:
-
 ### Install Fluent
 
 ```Bash
@@ -12,7 +10,7 @@ docker pull fluent/fluentd
 ```Bash
 vim /tmp/fluentd.conf
 ```
-
+### fluentd.conf
 ```fluentd.conf
 <source>
     @type forward
