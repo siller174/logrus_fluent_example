@@ -1,0 +1,13 @@
+/bin/*
+.vscode/
+/pkg/version/resource.go
+contrib/dbg/.*
+debug
+debug.test
+*.sublime-project
+*.sublime-workspace
+*.un~
+*.swp
+.idea/
+*.iml
+
